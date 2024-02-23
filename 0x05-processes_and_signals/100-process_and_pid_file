@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#this scirpt  handle SIGINGT ,SIGTERM and SIGQUIT signals display  To infinity and beyond 
+delete() {
+    echo "I hate the kill command"
+    rm -f /var/run/myscript.pid
+    exit 0
+}
+
+trap delete SIGTERM SIGQUIT
+
+echo $$ > /var/run/myscript.pid
+while true; do
+    echo "To infinity and beyond"
+    trap 'echo "Y U no love me?!"' SIGINT
+    sleep 1
+done

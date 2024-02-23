@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-#this script find the PID of the process and kill it
-pid=$(pgrep -f 4-to_infinity_and_beyond)
-if [ -n "$pid" ];then
- kill "$pid"
-fi
