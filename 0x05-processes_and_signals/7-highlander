@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script displays "To infinity and beyond" indefinitely and exits gracefully when Ctrl + C is pressed and when SIGTERM is recieved it will print  I am invincible!!!
+while true;
+do
+echo "To infinity and beyond"
+sleep 2
+trap 'echo "I am invincible!!!"' SIGTERM
+done

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#this script find the PID of the process and kill it forcely
+pid=$(pgrep -f 7-highlander)
+if [ -n "$pid" ];then
+ kill -9 "$pid"
+fi
